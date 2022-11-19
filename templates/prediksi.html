@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PREDIKSI</title>
+    <link rel="stylesheet" href="../static/style2.css">
+</head>
+<body>
+    <main>
+      <div class="card">
+        <form method="POST" action="/prediksi">
+            <h2>PREDIKSI HUJAN AUSTRALIA</h2>
+            <div class="row">
+              <div class="col">
+                <div class="form-group">
+                  <select type="Hari" name='Hari' placeholder="Hari ini hujan">
+                    <option selected>Hari ini hujan</option>
+                    <option value="Ya">Ya</option>
+                    <option value="Tidak">Ngga</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col">
+                <div class="form-group">
+                  <select type="Lokasi" name='Lokasi' placeholder="Hari ini hujan">
+                    <option selected>Lokasi</option>
+                    <option value="Albury">Albury</option>
+                    <option value="BadgerysCreek">BadgerysCreek</option>
+                    <option value="Cobar">Cobar</option>
+                    <option value="CoffsHarbour">CoffsHarbour</option>
+                    <option value="Moree">Moree</option>
+                    <option value="Newcastle">Newcastle</option>
+                    <option value="NorahHead">NorahHead</option>
+                    <option value="NorfolkIsland">NorfolkIsland</option>
+                    <option value="Penrith">Penrith</option>
+                    <option value="Richmond">Richmond</option>
+                    <option value="Sydney">Sydney</option>
+                    <option value="SydneyAirport">SydneyAirport</option>
+                    <option value="WaggaWagga">WaggaWagga</option>
+                    <option value="Williamtown">Williamtown</option>
+                    <option value="Wollongong">Wollongong</option>
+                    <option value="Canberra">Canberra</option>
+                    <option value="Tuggeranong">Tuggeranong</option>
+                    <option value="MountGinini">MountGinini</option>
+                    <option value="Ballarat">Ballarat</option>
+                    <option value="Bendigo">Bendigo</option>
+                    <option value="Sale">Sale</option>
+                    <option value="MelbourneAirport">MelbourneAirport</option>
+                    <option value="Townsville">Townsville</option>
+                    <option value="Adelaide">Adelaide</option>
+                    <option value="MountGambier">MountGambier</option>
+                    <option value="Nuriootpa">Nuriootpa</option>
+                    <option value="Woomera">Woomera</option>
+                    <option value="Albany">Albany</option>
+                    <option value="Witchcliffe">Witchcliffe</option>
+                    <option value="PearceRAAF">PearceRAAF</option>
+                    <option value="PerthAirport">PerthAirport</option>
+                    <option value="Perth">Perth</option>
+                    <option value="SalmonGums">SalmonGums</option>
+                    <option value="Walpole">Walpole</option>
+                    <option value="Hobart">Hobart</option>
+                    <option value="Launceston">Launceston</option>
+                    <option value="AliceSprings">AliceSprings</option>
+                    <option value="Darwin">Darwin</option>
+                    <option value="Katherine">Katherine</option>
+                    <option value="Uluru">Uluru</option>
+                  </select>
+                </div>
+              </div>
+            </div >
+            <div class='row'>      
+              <div class="col">
+                <div class="form-group">
+                  <select type="form-select" name='Arah' placeholder="Angin 3 Sore">
+                    <option selected>Arah angin jam 9 pagi</option>
+                    <option value="W">West</option>
+                    <option value="NNW">North Nort West</option>
+                    <option value="SE">South East</option>
+                    <option value="ENE">East Nort East </option>
+                    <option value="SW">South West</option>
+                    <option value="SSE">South South East</option>
+                    <option value="S">South</option>
+                    <option value="NE">North East</option>
+                    <option value="N">North</option>
+                    <option value="SSW">South South West</option>
+                    <option value="WSW">West South West</option>
+                    <option value="ESE">East South East</option>
+                    <option value="E">East</option>
+                    <option value="NW">North West</option>
+                    <option value="NNE">North North West</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class='row'>      
+                <div class="col">
+                  <div class="form-group">
+                    <label >Jam Cerah (jam)</label>
+                    <input type="range" min="0" max="24.0" step="0.1" value="5.0" class="slider" name="jam"
+                    oninput="this.nextElementSibling.value = this.value">
+                    <output>5</output>
+                  </div>
+                </div>
+            </div >
+          </br>
+          <div class='row'>
+            <div class="col">
+              <div class="form-group">
+                <label >Awan 3 Sore (%) </label>
+                <input type="range" min="0" max="100.0" step="0.1" value="5.0" class="slider" name="awan"
+                oninput="this.nextElementSibling.value = this.value">
+                <output>5</output>
+              </div>
+            </div>
+          </div>
+        </br>
+            <div class='row'>
+              <div class="col">
+                <div class="form-group">
+                  <label >Kelembaban Jam 3 Sore (%)</label>
+                  <input type="range" min="0.0" max="100.0" step="0.1" value="5.0" class="slider" name="kelembaban" 
+                  oninput="this.nextElementSibling.value = this.value">
+                  <output>5</output>
+                </div>
+              </div>
+            </div>
+              </br>
+            </br>
+        <div class='row'>
+              <div class="col">
+                <button type="submit" value="update">GO</button>
+              </div>
+            </div>
+      </form> 
+      
+    </div>
+    {%if prediksi%}
+    <div class='message fw-bold'>
+      <p>
+        PREDICTION
+      </br>
+      </br>
+        {{ prediksi }}
+      </p>
+    </div>
+    {%else%}
+    {%endif%}
+
+
+  </main>
+
+
+</body>
+</html>
